@@ -1,35 +1,18 @@
-﻿namespace Knapsack
-{
-    internal class Item
-    {
-        //private string name;
-        private uint _value;
+﻿using System;
 
-        private uint _weight;
+namespace Knapsack
+{
+    public class Item
+    {
+        private string name;
+        private int value;
+        private int weight;
 
         public string Name { get; set; }
+        public int Weight { get; set; }
+        public int Value { get; set; }
 
-        public uint Value
-        {
-            get { return _value; }
-            set
-            {
-                if (value <= 0) throw new System.ArgumentException("Parameter cannot be 0", "Value");
-                _value = value;
-            }
-        }
-
-        public uint Weight
-        {
-            get { return _weight; }
-            set
-            {
-                if (value <= 0) throw new System.ArgumentException("Parameter cannot be 0", "Weight");
-                _weight = value;
-            }
-        }
-
-        public Item(string name, uint value, uint weight)
+        public Item(string name, int value, int weight)
         {
             Name = name;
             Value = value;
