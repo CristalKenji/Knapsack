@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Transactions;
 
 namespace Knapsack
 {
@@ -12,16 +13,20 @@ namespace Knapsack
         public int Weight { get; set; }
         public int Value { get; set; }
 
-        public Item(string name, int value, int weight)
+        public Item(int weight, int value) : this("Item", weight, value)
+        {
+        }
+
+        public Item(string name, int weight, int value)
         {
             Name = name;
-            Value = value;
             Weight = weight;
+            Value = value;
         }
 
         public override string ToString()
         {
-            return Name + "\tv: " + Value + "\tw: " + Weight;
+            return Name + "\tw: " + Weight + "\tv: " + Value;
         }
     }
 }
