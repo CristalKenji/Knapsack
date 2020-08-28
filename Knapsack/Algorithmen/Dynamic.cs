@@ -36,14 +36,14 @@ namespace Knapsack.Algorithmen
                     }
                 }
             }
-            for (int i = 0; i <= numItems; i++)
-            {
-                for (int j = 0; j <= capacity; j++)
-                {
-                    Console.Write(matrix[i, j] + "  ");
-                }
-                Console.WriteLine();
-            }
+            //for (int i = 0; i <= numItems; i++)
+            //{
+            //    for (int j = 0; j <= capacity; j++)
+            //    {
+            //        Console.Write(matrix[i, j] + "  ");
+            //    }
+            //    Console.WriteLine();
+            //}
             return matrix[numItems, capacity];
         }
     }

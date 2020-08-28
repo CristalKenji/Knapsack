@@ -5,10 +5,13 @@ using System.Text;
 
 namespace Knapsack.Algorithmen
 {
-    internal static class Greedy
+    public class Greedy
     {
-        public static int Solve(List<Item> items, int capacity)
+        public int Solve(InputSet inputSet)
         {
+            List<Item> items = inputSet.Items;
+            int capacity = inputSet.Capacity;
+
             items = items.OrderByDescending(o => o.Value).ToList();
 
             //items.ForEach(i => Console.Write("\n" + i));
@@ -23,13 +26,12 @@ namespace Knapsack.Algorithmen
                     value += items[i].Value;
                     currentCapacity -= items[i].Weight;
 
-                    if (currentCapacity == 0)
+                    if (currentCapacity <= 0)
                     {
                         break;
                     }
                 }
             }
-
             return value;
         }
     }
