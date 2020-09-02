@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Knapsack
 {
-    internal static class InputParser
+    public static class InputParser
     {
         public static InputSet ParseInputFile(string InputSetName)
         {

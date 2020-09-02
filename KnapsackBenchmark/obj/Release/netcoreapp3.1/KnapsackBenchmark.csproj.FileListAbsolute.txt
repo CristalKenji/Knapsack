@@ -1,0 +1,16 @@
+C:\HS Fulda\Semester 4\Komplexitätstheorie\Knapsack\KnapsackBenchmark\bin\Release\netcoreapp3.1\Knapsack.exe
+C:\HS Fulda\Semester 4\Komplexitätstheorie\Knapsack\KnapsackBenchmark\bin\Release\netcoreapp3.1\KnapsackBenchmark.exe
+C:\HS Fulda\Semester 4\Komplexitätstheorie\Knapsack\KnapsackBenchmark\bin\Release\netcoreapp3.1\KnapsackBenchmark.deps.json
+C:\HS Fulda\Semester 4\Komplexitätstheorie\Knapsack\KnapsackBenchmark\bin\Release\netcoreapp3.1\KnapsackBenchmark.runtimeconfig.json
+C:\HS Fulda\Semester 4\Komplexitätstheorie\Knapsack\KnapsackBenchmark\bin\Release\netcoreapp3.1\KnapsackBenchmark.runtimeconfig.dev.json
+C:\HS Fulda\Semester 4\Komplexitätstheorie\Knapsack\KnapsackBenchmark\bin\Release\netcoreapp3.1\KnapsackBenchmark.dll
+C:\HS Fulda\Semester 4\Komplexitätstheorie\Knapsack\KnapsackBenchmark\bin\Release\netcoreapp3.1\KnapsackBenchmark.pdb
+C:\HS Fulda\Semester 4\Komplexitätstheorie\Knapsack\KnapsackBenchmark\bin\Release\netcoreapp3.1\Knapsack.dll
+C:\HS Fulda\Semester 4\Komplexitätstheorie\Knapsack\KnapsackBenchmark\bin\Release\netcoreapp3.1\Knapsack.pdb
+C:\HS Fulda\Semester 4\Komplexitätstheorie\Knapsack\KnapsackBenchmark\obj\Release\netcoreapp3.1\KnapsackBenchmark.csprojAssemblyReference.cache
+C:\HS Fulda\Semester 4\Komplexitätstheorie\Knapsack\KnapsackBenchmark\obj\Release\netcoreapp3.1\KnapsackBenchmark.AssemblyInfoInputs.cache
+C:\HS Fulda\Semester 4\Komplexitätstheorie\Knapsack\KnapsackBenchmark\obj\Release\netcoreapp3.1\KnapsackBenchmark.AssemblyInfo.cs
+C:\HS Fulda\Semester 4\Komplexitätstheorie\Knapsack\KnapsackBenchmark\obj\Release\netcoreapp3.1\KnapsackBenchmark.csproj.CopyComplete
+C:\HS Fulda\Semester 4\Komplexitätstheorie\Knapsack\KnapsackBenchmark\obj\Release\netcoreapp3.1\KnapsackBenchmark.dll
+C:\HS Fulda\Semester 4\Komplexitätstheorie\Knapsack\KnapsackBenchmark\obj\Release\netcoreapp3.1\KnapsackBenchmark.pdb
+C:\HS Fulda\Semester 4\Komplexitätstheorie\Knapsack\KnapsackBenchmark\obj\Release\netcoreapp3.1\KnapsackBenchmark.genruntimeconfig.cache

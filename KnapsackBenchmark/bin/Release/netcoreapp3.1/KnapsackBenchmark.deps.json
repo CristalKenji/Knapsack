@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "KnapsackBenchmark/1.0.0": {
+        "dependencies": {
+          "Knapsack": "1.0.0"
+        },
+        "runtime": {
+          "KnapsackBenchmark.dll": {}
+        }
+      },
+      "Knapsack/1.0.0": {
+        "runtime": {
+          "Knapsack.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "KnapsackBenchmark/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Knapsack/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
