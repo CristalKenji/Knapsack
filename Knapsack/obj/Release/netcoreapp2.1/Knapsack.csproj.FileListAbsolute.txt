@@ -1,0 +1,4 @@
+C:\HS Fulda\Semester 4\Komplexitätstheorie\Knapsack\Knapsack\obj\Release\netcoreapp2.1\Knapsack.csprojAssemblyReference.cache
+C:\HS Fulda\Semester 4\Komplexitätstheorie\Knapsack\Knapsack\obj\Release\netcoreapp2.1\Knapsack.AssemblyInfoInputs.cache
+C:\HS Fulda\Semester 4\Komplexitätstheorie\Knapsack\Knapsack\obj\Release\netcoreapp2.1\Knapsack.AssemblyInfo.cs
+C:\HS Fulda\Semester 4\Komplexitätstheorie\Knapsack\Knapsack\obj\Release\netcoreapp2.1\Knapsack.csproj.CoreCompileInputs.cache

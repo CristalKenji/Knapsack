@@ -10,6 +10,7 @@ namespace Knapsack
     {
         private static void Main(string[] args)
         {
+            Console.WriteLine("Hi");
             //**************************************************************************
             // Algorithms
             //**************************************************************************
@@ -58,8 +59,8 @@ namespace Knapsack
             //    setNum++;
             //});
 
-            int setIndex = 0;
-            Test.writeTestToFile("LowDimensional-TestResult", inputSets_ld[setIndex], setIndex + 1, greedy.Solve(inputSets_ld[setIndex]), memory.Solve(inputSets_ld[setIndex]), dynamic.Solve(inputSets_ld[setIndex]));
+            //int setIndex = 0;
+            //Test.writeTestToFile("LowDimensional-TestResult", inputSets_ld[setIndex], setIndex + 1, greedy.Solve(inputSets_ld[setIndex]), memory.Solve(inputSets_ld[setIndex]), dynamic.Solve(inputSets_ld[setIndex]));
             //###############################################################################################################################################################################
             //**************************************************************************
             // LargeScale Test-Sets

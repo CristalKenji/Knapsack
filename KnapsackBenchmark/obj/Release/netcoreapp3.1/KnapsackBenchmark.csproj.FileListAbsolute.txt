@@ -14,3 +14,4 @@ C:\HS Fulda\Semester 4\Komplexitätstheorie\Knapsack\KnapsackBenchmark\obj\Relea
 C:\HS Fulda\Semester 4\Komplexitätstheorie\Knapsack\KnapsackBenchmark\obj\Release\netcoreapp3.1\KnapsackBenchmark.dll
 C:\HS Fulda\Semester 4\Komplexitätstheorie\Knapsack\KnapsackBenchmark\obj\Release\netcoreapp3.1\KnapsackBenchmark.pdb
 C:\HS Fulda\Semester 4\Komplexitätstheorie\Knapsack\KnapsackBenchmark\obj\Release\netcoreapp3.1\KnapsackBenchmark.genruntimeconfig.cache
+C:\HS Fulda\Semester 4\Komplexitätstheorie\Knapsack\KnapsackBenchmark\obj\Release\netcoreapp3.1\KnapsackBenchmark.csproj.CoreCompileInputs.cache
