@@ -1,8 +1,6 @@
 ﻿using ConsoleTables;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace Knapsack
 {
@@ -47,7 +45,7 @@ namespace Knapsack
             Console.SetOut(oldOut);
             writer.Close();
             ostrm.Close();
-            Console.WriteLine("Done");
+            Console.WriteLine("Write InputSet " + fileName + " - Done");
         }
     }
 }

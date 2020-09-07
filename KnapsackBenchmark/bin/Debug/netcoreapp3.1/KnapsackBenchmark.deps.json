@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "KnapsackBenchmark/1.0.0": {
         "dependencies": {
+          "BenchmarkDotNet": "0.12.1",
           "Knapsack": "1.0.0"
         },
         "runtime": {

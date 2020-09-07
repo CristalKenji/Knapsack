@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Knapsack.Algorithmen
 {
@@ -13,8 +11,6 @@ namespace Knapsack.Algorithmen
             int capacity = inputSet.Capacity;
 
             items = items.OrderByDescending(o => o.Value).ToList();
-
-            //items.ForEach(i => Console.Write("\n" + i));
 
             int value = 0;
             int currentCapacity = capacity;

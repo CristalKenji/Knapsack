@@ -1,26 +1,46 @@
-﻿using ConsoleTables;
-using Knapsack.Algorithmen;
-using System;
+﻿using Knapsack.Algorithmen;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Knapsack
 {
     internal class Program
     {
+        private static Greedy greedy = new Greedy();
+        private static Dynamic dynamic = new Dynamic();
+        private static MemoryFunction memory = new MemoryFunction();
+
         private static void Main(string[] args)
         {
-            Console.WriteLine("Hi");
+            // Test-Set Import
+            List<InputSet> inputSets_ld = parse_LD_TestSet();  //LowDimensional
+            List<InputSet> inputSets_ls = parse_LS_TestSet(); //LargeScale
+
             //**************************************************************************
-            // Algorithms
+            // Algorithmen Test
             //**************************************************************************
-            Greedy greedy = new Greedy();
-            Dynamic dynamic = new Dynamic();
-            MemoryFunction memory = new MemoryFunction();
-            //###############################################################################################################################################################################
-            //**************************************************************************
-            // LowDimensional Test-Sets
-            //**************************************************************************
+            printTestToConsole(inputSets_ld, false);
+            printTestToConsole(inputSets_ls, true);
+
+            // for performance reasons set inputSets_ls[6] has to be testet individually
+            //int index = 6;
+            //Test.printTest(inputSets_ls[index], index - 1, greedy.Solve(inputSets_ls[index]), memory.Solve(inputSets_ls[index]), dynamic.Solve(inputSets_ls[index]));
+
+            //*************************************************
+            // Get Itemlist Example
+            //dynamic.Solve(inputSets_ld[3]);
+            //Bag bag = dynamic.getItemBag();
+            //bag.printContent();
+
+            //*************************************************
+            // Test-output to File
+            //printTestToFile(inputSets_ld, "LowDimensional-TestResult", false);
+            //printTestToFile(inputSets_ls, "LargeScale-TestResult", true);
+            //int setIndex = 6;
+            //Test.writeTestToFile("LargeScale-TestResult", inputSets_ls[setIndex], setIndex + 1, greedy.Solve(inputSets_ls[setIndex]), memory.Solve(inputSets_ls[setIndex]), dynamic.Solve(inputSets_ls[setIndex]));
+        }
+
+        private static List<InputSet> parse_LD_TestSet()
+        {
             List<InputSet> inputSets_ld = new List<InputSet>();
             inputSets_ld.Add(InputParser.ParseInputFile("LowDimensional\\f1_4_11"));
             inputSets_ld.Add(InputParser.ParseInputFile("LowDimensional\\f2_4_20"));
@@ -30,45 +50,38 @@ namespace Knapsack
             inputSets_ld.Add(InputParser.ParseInputFile("LowDimensional\\f6_10_269"));
             inputSets_ld.Add(InputParser.ParseInputFile("LowDimensional\\f7_20_878"));
             inputSets_ld.Add(InputParser.ParseInputFile("LowDimensional\\f8_23_10000"));
+            return inputSets_ld;
+        }
 
-            //**************************************************************************
-            // Print LowDimensional Test-Sets
-            //**************************************************************************
-            //inputSets_ld.ForEach(delegate (InputSet inputSet) { inputSet.printSet(); });
-            //inputSets_ld[0].printSet();
+        private static List<InputSet> parse_LS_TestSet()
+        {
+            List<InputSet> inputSets_ls = new List<InputSet>();
+            inputSets_ls.Add(InputParser.ParseInputFile("LargeScale\\f1_100_995"));
+            inputSets_ls.Add(InputParser.ParseInputFile("LargeScale\\f2_200_1008"));
+            inputSets_ls.Add(InputParser.ParseInputFile("LargeScale\\f3_500_2543"));
+            inputSets_ls.Add(InputParser.ParseInputFile("LargeScale\\f4_1000_5002"));
+            inputSets_ls.Add(InputParser.ParseInputFile("LargeScale\\f5_2000_10011"));
+            inputSets_ls.Add(InputParser.ParseInputFile("LargeScale\\f6_5000_25016"));
+            inputSets_ls.Add(InputParser.ParseInputFile("LargeScale\\f7_10000_49877"));
+            return inputSets_ls;
+        }
 
-            //**************************************************************************
-            // LowDimensional Test-output to Console
-            //**************************************************************************
-            //Test.printTest(inputSets_ld[4], 5, greedy.Solve(inputSets_ld[4]), memory.Solve(inputSets_ld[4]), dynamic.Solve(inputSets_ld[4]));
+        private static void printTestToConsole(List<InputSet> inputsets, bool isLargeScale)
+        {
+            int bound = isLargeScale ? inputsets.Count - 1 : inputsets.Count;
+            for (int i = 0; i < bound; i++)
+            {
+                Test.printTest(inputsets[i], i + 1, greedy.Solve(inputsets[i]), memory.Solve(inputsets[i]), dynamic.Solve(inputsets[i]));
+            }
+        }
 
-            //int setNum = 1;
-            //inputSets_ld.ForEach(delegate (InputSet inputset)
-            //{
-            //    Test.printTest(inputset, setNum, greedy.Solve(inputset), memory.Solve(inputset), dynamic.Solve(inputset));
-            //    setNum++;
-            //});
-
-            //**************************************************************************
-            // LowDimensional Test-output to File
-            //**************************************************************************
-            //int setNum = 1;
-            //inputSets_ld.ForEach(delegate (InputSet inputset)
-            //{
-            //    Test.writeTestToFile("LowDimensional-TestResult", inputset, setNum, greedy.Solve(inputset), memory.Solve(inputset), dynamic.Solve(inputset));
-            //    setNum++;
-            //});
-
-            //int setIndex = 0;
-            //Test.writeTestToFile("LowDimensional-TestResult", inputSets_ld[setIndex], setIndex + 1, greedy.Solve(inputSets_ld[setIndex]), memory.Solve(inputSets_ld[setIndex]), dynamic.Solve(inputSets_ld[setIndex]));
-            //###############################################################################################################################################################################
-            //**************************************************************************
-            // LargeScale Test-Sets
-            //**************************************************************************
-
-            //**************************************************************************
-            // LargeScale Test-output to File
-            //**************************************************************************
+        private static void printTestToFile(List<InputSet> inputsets, string filename, bool isLargeScale)
+        {
+            int bound = isLargeScale ? inputsets.Count - 1 : inputsets.Count;
+            for (int i = 0; i < bound; i++)
+            {
+                Test.writeTestToFile(filename, inputsets[i], i + 1, greedy.Solve(inputsets[i]), memory.Solve(inputsets[i]), dynamic.Solve(inputsets[i]));
+            }
         }
     }
 }

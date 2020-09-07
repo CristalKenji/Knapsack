@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Knapsack.Algorithmen
 {
@@ -31,19 +30,7 @@ namespace Knapsack.Algorithmen
                     matrix[i, j] = -1;
                 }
             }
-
-            int returnValue = MemFunc(numItems, capacity);
-
-            //for (int i = 0; i <= numItems; i++)
-            //{
-            //    for (int j = 0; j <= capacity; j++)
-            //    {
-            //        Console.Write(matrix[i, j] + "  ");
-            //    }
-            //    Console.WriteLine();
-            //}
-
-            return returnValue;
+            return MemFunc(numItems, capacity);
         }
 
         private int MemFunc(int numItems, int capacity)

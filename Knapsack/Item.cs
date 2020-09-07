@@ -1,14 +1,7 @@
-﻿using System;
-using System.Transactions;
-
-namespace Knapsack
+﻿namespace Knapsack
 {
     public class Item
     {
-        private string name;
-        private int value;
-        private int weight;
-
         public string Name { get; set; }
         public int Weight { get; set; }
         public int Value { get; set; }

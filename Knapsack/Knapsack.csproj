@@ -6,7 +6,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <Folder Include="InputCSV\LargeScale\" />
 	  <Folder Include="OutputFile\" />
 	</ItemGroup>
 

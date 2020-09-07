@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Knapsack.Algorithmen
 {
@@ -8,11 +7,13 @@ namespace Knapsack.Algorithmen
     {
         private int[,] matrix;
         private List<Item> items;
+        private int capacity;
+        private Bag bag;
 
         public int Solve(InputSet inputSet)
         {
             int numItems = inputSet.Items.Count;
-            int capacity = inputSet.Capacity;
+            capacity = inputSet.Capacity;
             items = inputSet.Items;
 
             matrix = new int[numItems + 1, capacity + 1];
@@ -36,15 +37,36 @@ namespace Knapsack.Algorithmen
                     }
                 }
             }
-            //for (int i = 0; i <= numItems; i++)
-            //{
-            //    for (int j = 0; j <= capacity; j++)
-            //    {
-            //        Console.Write(matrix[i, j] + "  ");
-            //    }
-            //    Console.WriteLine();
-            //}
             return matrix[numItems, capacity];
+        }
+
+        public Bag getItemBag()
+        {
+            if (matrix == null)
+            {
+                return null;
+            }
+            bag = new Bag(capacity);
+            checkItem(items.Count, capacity);
+            return bag;
+        }
+
+        private void checkItem(int i, int w)
+        {
+            if (i <= 0 || w <= 0)
+            {
+                return;
+            }
+
+            if (matrix[i, w] != matrix[i - 1, w])
+            {
+                bag.addItem(items[i - 1]);
+                checkItem(i - 1, w - items[i - 1].Weight);
+            }
+            else
+            {
+                checkItem(i - 1, w);
+            }
         }
     }
 }
